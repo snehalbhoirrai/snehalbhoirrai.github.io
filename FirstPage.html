@@ -1,0 +1,115 @@
+<html>
+
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-198090051-2"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-198090051-2');
+    </script>
+
+
+    <!-- Google Tag Manager -->
+    <!-- <script>
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({
+            'Action': 'Submit',
+            'firstname': 'Abc',
+            'email': 'abc@demo.com',
+            'mobile': '7789578912',
+            'dob': '15/02/1992',
+            'gender': 'female',
+            'event': 'RegistrationComplete'
+        });
+    </script> -->
+    <script>
+        (function(w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({
+                'gtm.start': new Date().getTime(),
+                event: 'gtm.js'
+            });
+            var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s),
+                dl = l != 'dataLayer' ? '&l=' + l : '';
+            j.async = true;
+            j.src =
+                'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-KWSFJK2');
+    </script>
+    <!-- End Google Tag Manager -->
+    <script>
+        function validateForm() {
+
+            if (!document.regform.firstname.value.match(/^[A-Za-z]+$/)) {
+                alert("Please provide your valid name!");
+                return false;
+            }
+            if (document.regform.email.value == "") {
+                alert("Please provide your valid Email!");
+                return false;
+            }
+            if (!(document.regform.phone.value.match(/^(\+\d{1,3}[- ]?)?\d{10}$/) && !(document.regform.phone.value.match(/0{9,}/)))) {
+                alert("Please provide valid Mobile number");
+                return false;
+            }
+            if (document.regform.birth.value == "") {
+                alert("Please provide your valid DoB");
+                return false;
+            }
+            if (document.regform.gender[0].checked == false && document.regform.gender[1].checked == false && document.regform.gender[2].checked == false) {
+                alert("Please Select Gender");
+                return false;
+            }
+
+        }
+    </script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=UA-198090051-1"></script> -->
+    <!-- <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-198090051-1');
+    </script> -->
+</head>
+
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KWSFJK2"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <h2>Registration Form</h2>
+    <form name="regform" id="form1" action="SecondPage.html" onsubmit=" return validateForm()">
+        First name:<br>
+        <input type="text" name="firstname" id="name">
+        <br> Email:
+        <br>
+        <input type="email" name="email" id="mail">
+        <br>Mobile
+        <br>
+        <input type="tel" id="phone" name="phone">
+        <br>DOB
+        <br>
+        <input type="date" id="DOB" name="birth" max="2015-01-01">
+        <br> Gender:
+        <br>
+        <input type="radio" name="gender" id="male" value="male">Male <input type="radio" name="gender" id="female" value="female"> Female <input type="radio" name="gender" id="other" value="other"> Other
+        <br>
+        <input id="formsubmit" type="submit" value="Submit">
+
+    </form>
+</body>
+
+</html>

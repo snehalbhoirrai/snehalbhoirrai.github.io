@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<html lang="en">
+
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-198090051-2"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-198090051-2');
+    </script>
+
+
+    <title>
+        Insurance Page
+    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" type="text/css" href="imgstyle.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js">
+    </script>
+
+    <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js">
+    </script>
+
+    <!-- Google Tag Manager -->
+    <script>
+        // window.dataLayer = window.dataLayer || [];
+        // window.dataLayer.push({
+        //     'customerType': 'vip',
+        //     'registrationCountry': 'United States'
+        // });
+
+        (function(w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({
+                'gtm.start': new Date().getTime(),
+                event: 'gtm.js'
+            });
+            var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s),
+                dl = l != 'dataLayer' ? '&l=' + l : '';
+            j.async = true;
+            j.src =
+                'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-KWSFJK2');
+    </script>
+    <!-- End Google Tag Manager -->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=UA-198090051-1"></script> -->
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-198090051-1');
+    </script>
+</head>
+
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KWSFJK2"
+        height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <h1>Insurance</h1>
+    <script>
+        var dest_location;
+        (function() {
+            var nTimer = setInterval(function() {
+                if (window.jQuery) {
+                    $(".image").click(function(event) {
+                        $('.image').removeClass('selected');
+                        $(this).addClass('selected');
+                        $('.enableOnInput').prop('disabled', false);
+                        // console.log(" event - " + event.target.id + "  src - " + event.target.src);
+                        sendimg(event.target.id, event.target.src);
+
+                    });
+
+                    function sendimg(id, src) {
+                        // console.log(" id and src - " + id + " - " + src);
+                        dest_location = 'ThirdPage.html#id=' + id + '&src=' + src;
+                        // window.location.href = 'ThirdPage.html#id=' + id + '&src=' + src;
+                        // window.location.href = "ThirdPage.html";
+                    }
+
+
+                    $("#myButton").click(function() {
+                        location.href = dest_location;
+                        // var x = $('.image.selected');
+
+                    })
+                    clearInterval(nTimer);
+                }
+            }, 1000);
+        })();
+    </script>
+
+    <div class="container">
+        <div id="imglist">
+            <a href="#" class="anch">
+                <img id='1' class="image" src="Img1.jpg" ;>
+            </a>
+
+            <a href="#" class="anch">
+                <img id='2' class="image" src="Img2.jpg" ;>
+            </a>
+
+            <a href="#" class="anch">
+                <img id='3' class="image" src="Img3.jpg" ;>
+            </a>
+
+            <a href="#" class="anch">
+                <img id='4' class="image" src="Img4.jpg" ;>
+            </a>
+
+            <a href="#" class="anch">
+                <img id='5' class="image" src="Img5.jpg" ;>
+            </a>
+
+            <a href="#" class="anch">
+                <img id='6' class="image" src="Img6.jpg" ;>
+            </a>
+        </div>
+        &nbsp;
+        <!-- <input type="submit" value="Next"> -->
+        <div class="container">
+            <div class="col-md-12 text-justify">
+                <button type="button" id="myButton" class='enableOnInput' disabled='disabled'>Next</button>
+
+            </div>
+        </div>
+
+
+
+    </div>
+</body>
+
+</html>

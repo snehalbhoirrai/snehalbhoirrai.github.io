@@ -1,0 +1,95 @@
+<html lang="en">
+
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-198090051-2"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-198090051-2');
+    </script>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Lato:600,600|Montserrat:700' rel='stylesheet' type='text/css'>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Google Tag Manager -->
+    <script>
+        // window.dataLayer = window.dataLayer || [];
+        // window.dataLayer.push({
+        //     'customerType': 'vip',
+        //     'registrationCountry': 'United States'
+        // });
+
+        (function(w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({
+                'gtm.start': new Date().getTime(),
+                event: 'gtm.js'
+            });
+            var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s),
+                dl = l != 'dataLayer' ? '&l=' + l : '';
+            j.async = true;
+            j.src =
+                'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-KWSFJK2');
+    </script>
+    <!-- End Google Tag Manager -->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=UA-198090051-1"></script> -->
+    <!-- <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-198090051-1');
+    </script> -->
+
+</head>
+
+<body onload="getimg()">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KWSFJK2"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <header class="site-header" id="header">
+        <h1 style="text-align: center; margin-bottom: auto;">THANK YOU!</h1>
+        <div id="test">
+
+        </div>
+    </header>
+    <script>
+        // var img1 = document.createElement("img");
+        // img1.src = $('.image.selected');
+        // $('#test').append("img1");
+
+        function getimg() {
+            var a = window.location.href.split('#')[1].split('&'),
+                id = a[0].split('=')[1],
+                src = a[1].split('=')[1],
+                img = document.images[0];
+            var img1 = document.createElement("img");
+            img1.src = src;
+            $('#test').html(img1);
+
+        }
+    </script>
+
+
+
+
+</body>
+
+</html>
